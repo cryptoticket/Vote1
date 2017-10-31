@@ -8,7 +8,7 @@ function diffWithGas(mustBe,diff){
 }
 
 function getContractAbi(contractName,cb){
-     var file = './contracts/GoldmintVote1.sol';
+     var file = './contracts/CryptoTicketsVote1.sol';
 
      fs.readFile(file, function(err, result){
           assert.equal(err,null);
@@ -85,8 +85,8 @@ function deploySampleTokenContract(cb){
 }
 
 function deployVoteContract(cb){
-     var file = './contracts/GoldmintVote1.sol';
-     var contractName = ':GoldmintVote1';
+     var file = './contracts/CryptoTicketsVote1.sol';
+     var contractName = ':CryptoTicketsVote1';
 
      fs.readFile(file, function(err, result){
           assert.equal(err,null);

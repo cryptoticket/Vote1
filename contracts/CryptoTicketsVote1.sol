@@ -28,11 +28,11 @@ contract StdToken {
      function allowance(address, address) constant returns (uint256);
 }
 
-contract GoldmintVote1 {
+contract CryptoTicketsVote1 {
 // Fields:
      address public creator = 0x0;
      bool public stopped = false;
-     StdToken mntpToken; 
+     StdToken token; 
 
      mapping(address => bool) isVoted;
      mapping(address => bool) votes;
@@ -40,11 +40,11 @@ contract GoldmintVote1 {
      uint public votedYes = 0;
 
 // Functions:
-     function GoldmintVote1(address _mntpContractAddress) {
-          require(_mntpContractAddress!=0);
+     function CryptoTicketsVote1(address _tokenContractAddress) {
+          require(_tokenContractAddress!=0);
 
           creator = msg.sender;
-          mntpToken = StdToken(_mntpContractAddress);
+          token = StdToken(_tokenContractAddress);
      }
 
      function vote(bool _answer) public {
@@ -52,7 +52,7 @@ contract GoldmintVote1 {
 
           // 1 - should be Goldmint MNTP token holder 
           // with >1 MNTP token balance
-          uint256 balance = mntpToken.balanceOf(msg.sender);
+          uint256 balance = token.balanceOf(msg.sender);
           require(balance>=10 ether);
 
           // 2 - can vote only once 
