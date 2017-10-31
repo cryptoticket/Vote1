@@ -10,7 +10,7 @@ contract StdToken {
 
 contract SampleToken is StdToken {
 // Fields:
-     string public constant name = "Goldmint Sample Token";
+     string public constant name = "Sample Token";
      string public constant symbol = "GMST";
      uint public constant decimals = 18;
 

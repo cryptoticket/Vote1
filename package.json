@@ -1,7 +1,7 @@
 {
-  "name": "GoldmintVote1",
+  "name": "Vote1",
   "version": "0.9.1",
-  "description": "Goldmint Vote 1",
+  "description": "Vote 1",
   "main": "main.js",
   "scripts": {
     "test": "env ETH_NODE=http://localhost:8989 mocha --reporter spec -t 90000",
@@ -41,7 +41,7 @@
     "npm": "*"
   },
   "keywords": [
-    "Goldmint"
+    ""
   ],
   "author": "Anthony Akentiev",
   "license": "",
