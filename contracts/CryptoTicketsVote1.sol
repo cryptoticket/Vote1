@@ -50,10 +50,10 @@ contract CryptoTicketsVote1 {
      function vote(bool _answer) public {
           require(!stopped);
 
-          // 1 - should be Goldmint MNTP token holder 
-          // with >1 MNTP token balance
+          // 1 - should be a token holder 
+          // with >1 token balance
           uint256 balance = token.balanceOf(msg.sender);
-          require(balance>=10 ether);
+          require(balance>=5 ether);
 
           // 2 - can vote only once 
           require(isVoted[msg.sender]==false);
